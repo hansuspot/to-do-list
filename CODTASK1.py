@@ -34,15 +34,12 @@ def edit_task():
     except IndexError:
         messagebox.showwarning("Warning!", "Nothing is selected to edit")
 
-# Create the main window
 m = tk.Tk()
 m.title("To-Do List by Hansraj")
 
-# Configure the main window
 m.geometry("400x400")
 m.configure(bg="#F0F0F0")
 
-# Frames and Listbox
 frame_tasks = tk.Frame(m, bg="#F0F0F0")
 frame_tasks.pack(pady=10)
 
@@ -53,7 +50,6 @@ scrollbar = tk.Scrollbar(frame_tasks, orient=tk.VERTICAL, command=listbox.yview)
 scrollbar.pack(side=tk.RIGHT, fill=tk.Y)
 listbox.config(yscrollcommand=scrollbar.set)
 
-# Entry and Buttons
 entrytask = tk.Entry(m, width=30, font=("Arial", 12))
 entrytask.pack(pady=10)
 
